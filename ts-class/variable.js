@@ -26,3 +26,14 @@ variableName.toString();
 // function add(num1: number, num2: number): number {
 //     return num1 + num2;
 // }
+// let val = {
+//     name1: {
+//         firstname: 'abc',
+//         lastname: 'bcd'
+//     }
+// };
+// if (val.name && val.name.firstname === 'abc') {
+// }
+var myArr = [1, 2, 3, 3];
+var myTupple = [1, 'namddf', true, [1, 3, 33]];
+myArr[0].toString();

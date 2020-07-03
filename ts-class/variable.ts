@@ -54,9 +54,19 @@ multi line comment
 // }
 
 let myArr = [1, 2, 3, 3];
-let myTupple: (string | number | boolean | number[])[] = [1, 'namddf', true, [1, 3, 33]];
-// type myTuppleType = (string | number | boolean | number[]);
-// let myTupple: myTuppleType[] = [1, 'namddf', true, [1, 3, 33]];
+// let myTupple: (string | number | boolean | number[])[] = [1, 'namddf', true, [1, 3, 33]];
+// interface Complex {
+//     name: string;
+//     std: string;
+// }
+
+// tslint:disable-next-line:interface-over-type-literal
+type complex = {
+    name: string;
+    std: string;
+};
+type myTuppleType = (string | number | boolean | number[] | complex);
+let myTupple: myTuppleType[] = [1, 'namddf', true, [1, 3, 33]];
 
 myArr[0].toString();
 
