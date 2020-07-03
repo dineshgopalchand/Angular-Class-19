@@ -18,3 +18,14 @@ function getDistance(points: Points) {
 console.log(getDistance({ maxPoint: 35, minPoint: 12 }));
 console.log(getDistance({ maxPoint: 45, minPoint: 17 }));
 
+class DrawPoints {
+    constructor(private points: Points) { }
+    getDistance() {
+        return this.points.maxPoint - this.points.minPoint;
+    }
+}
+
+const obj1 = new DrawPoints({ maxPoint: 35, minPoint: 12 });
+console.log(obj1.getDistance());
+const obj2 = new DrawPoints({ maxPoint: 45, minPoint: 12 });
+console.log(obj2.getDistance());
