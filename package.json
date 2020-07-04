@@ -22,8 +22,10 @@
     "@types/html-webpack-plugin": "^3.2.3",
     "@types/source-map": "^0.5.2",
     "@types/webpack": "^4.41.18",
+    "classlist.js": "^1.1.20150312",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
