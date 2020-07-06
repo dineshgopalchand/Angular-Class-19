@@ -1,0 +1,38 @@
+<h2>Display Data</h2>
+<hr>
+<p>{{titleVal}}</p>
+<p>{{1+5}}</p>
+<p>{{showTitle()+(1+5)}}</p>
+
+<div>{{description}}</div>
+<div>{{description1}}</div>
+<div [innerHTML]="description1"></div>
+<div [innerText]="description1"></div>
+<div [textContent]="description1"></div>
+
+<!-- <img [src]="imgSrc" [alt]="'lorem image'" [title]="'lorem image'" data-image-id="1a"> -->
+<hr>
+<table>
+    <tr>
+        <td [attr.colspan]="colSpan">Lorem.</td>
+        <td>Odio!</td>
+        <td>Eaque.</td>
+    </tr>
+    <tr>
+        <td [attr.rowspan]="rowSpan" [attr.description]="'some description'">Quo.</td>
+        <td>Quam.</td>
+        <td>Quasi?</td>
+        <td>Ipsa?</td>
+    </tr>
+    <tr>
+        <td>Doloremque?</td>
+        <td>Possimus.</td>
+        <td>Eligendi?</td>
+    </tr>
+    <tr>
+        <td>Id.</td>
+        <td>Excepturi.</td>
+        <td>Tenetur!</td>
+        <td>Quis.</td>
+    </tr>
+</table>
