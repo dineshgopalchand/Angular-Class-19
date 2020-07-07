@@ -43,13 +43,13 @@
     </div>
     <div class="part-2">
         <div>
-            <h3>Class Binding</h3>
+            <h3>Class Binding & Style binding</h3>
             <hr>
             <button class="btn m-1" [class.btn-primary]="isActive" [class.btn-danger]="!isActive" (click)="toggelButton()">
                 {{isActive ? 'Save': 'Delete'}}
             </button>
 
-            <p [class.font-weight-bold]="isActive" [class.font-italic]="!isActive">Added class: {{isActive ? 'font-weight-bold': 'font-italic'}}</p>
+            <p id="para" [class.font-weight-bold]="isActive" [class.font-italic]="!isActive" [style.backgroundColor]="isActive?'lightgray':'gray'">Added class: {{isActive ? 'font-weight-bold': 'font-italic'}}</p>
             <!-- <button class="btn btn-danger m-1">
                 Delete
             </button> -->
