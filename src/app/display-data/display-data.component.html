@@ -1,38 +1,58 @@
 <h2>Display Data</h2>
 <hr>
-<p>{{titleVal}}</p>
-<p>{{1+5}}</p>
-<p>{{showTitle()+(1+5)}}</p>
+<div>
+    <div class="part-2">
+        <p>{{titleVal}}</p>
+        <p>{{1+5}}</p>
+        <p>{{showTitle()+(1+5)}}</p>
 
-<div>{{description}}</div>
-<div>{{description1}}</div>
-<div [innerHTML]="description1"></div>
-<div [innerText]="description1"></div>
-<div [textContent]="description1"></div>
+        <div>{{description}}</div>
+        <div>{{description1}}</div>
+        <div [innerHTML]="description1"></div>
+        <div [innerText]="description1"></div>
+        <div [textContent]="description1"></div>
 
-<!-- <img [src]="imgSrc" [alt]="'lorem image'" [title]="'lorem image'" data-image-id="1a"> -->
-<hr>
-<table>
-    <tr>
-        <td [attr.colspan]="colSpan">Lorem.</td>
-        <td>Odio!</td>
-        <td>Eaque.</td>
-    </tr>
-    <tr>
-        <td [attr.rowspan]="rowSpan" [attr.description]="'some description'">Quo.</td>
-        <td>Quam.</td>
-        <td>Quasi?</td>
-        <td>Ipsa?</td>
-    </tr>
-    <tr>
-        <td>Doloremque?</td>
-        <td>Possimus.</td>
-        <td>Eligendi?</td>
-    </tr>
-    <tr>
-        <td>Id.</td>
-        <td>Excepturi.</td>
-        <td>Tenetur!</td>
-        <td>Quis.</td>
-    </tr>
-</table>
+        <!-- Example of property binding -->
+        <img [src]="imgSrc" [alt]="'lorem image'" [title]="'lorem image'" [attr.data-image-id]="'1a'">
+        <hr>
+        <table>
+            <tr>
+                <td [attr.colspan]="colSpan">Lorem.</td>
+                <!-- example of attribute binding -->
+                <td>Odio!</td>
+                <td>Eaque.</td>
+            </tr>
+            <tr>
+                <td [attr.rowspan]="rowSpan" [attr.description]="'some description'">Quo.</td>
+                <td>Quam.</td>
+                <td>Quasi?</td>
+                <td>Ipsa?</td>
+            </tr>
+            <tr>
+                <td>Doloremque?</td>
+                <td>Possimus.</td>
+                <td>Eligendi?</td>
+            </tr>
+            <tr>
+                <td>Id.</td>
+                <td>Excepturi.</td>
+                <td>Tenetur!</td>
+                <td>Quis.</td>
+            </tr>
+        </table>
+    </div>
+    <div class="part-2">
+        <div>
+            <h3>Class Binding</h3>
+            <hr>
+            <button class="btn m-1" [class.btn-primary]="isActive" [class.btn-danger]="!isActive" (click)="toggelButton()">
+                {{isActive ? 'Save': 'Delete'}}
+            </button>
+
+            <p [class.font-weight-bold]="isActive" [class.font-italic]="!isActive">Added class: {{isActive ? 'font-weight-bold': 'font-italic'}}</p>
+            <!-- <button class="btn btn-danger m-1">
+                Delete
+            </button> -->
+        </div>
+    </div>
+</div>

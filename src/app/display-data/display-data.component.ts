@@ -14,12 +14,17 @@ export class DisplayDataComponent implements OnInit {
   rowSpan = 2;
   colSpan = 2;
 
+  isActive = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
   showTitle() {
     return this.titleVal;
+  }
+  toggelButton() {
+    this.isActive = !this.isActive;
   }
 
 }
