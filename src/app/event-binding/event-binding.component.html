@@ -1,0 +1,14 @@
+<h3>Event binding</h3>
+<hr>
+<div>
+    <!-- div.form-group>label[for="first-name"]+input.form-control[name="first-name"][id="first-name"][placeholder="Enter First Name"] -->
+    <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" class="form-control" name="first-name" id="first-name" placeholder="Enter First Name" (keyup)="keyupEvent($event)">
+    </div>
+    <!-- div.form-group>button.btn.btn-primary.form-control -->
+    <div class="form-group">
+        <button class="btn btn-primary form-control" (click)="buttonClick($event)">Save</button>
+    </div>
+    <p>Inputed value: <b>{{inputValue ? inputValue:'null'}}</b></p>
+</div>
