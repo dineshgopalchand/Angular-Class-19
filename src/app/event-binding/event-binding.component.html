@@ -6,7 +6,8 @@
         <label for="first-name">First Name</label>
         <!-- <input type="text" class="form-control" name="first-name" id="first-name" placeholder="Enter First Name" (keyup)="keyupEvent($event)"> -->
         <!-- <input type="text" class="form-control" name="first-name" id="first-name" placeholder="Enter First Name" (keyup.enter)="keyupEvent($event.target.value)"> -->
-        <input type="text" class="form-control" name="first-name" id="first-name" #firstName placeholder="Enter First Name" (keyup.enter)="keyupEvent(firstName)">
+        <!-- <input type="text" class="form-control" name="first-name" id="first-name" #firstName placeholder="Enter First Name" (keyup.enter)="keyupEvent(firstName)"> -->
+        <input type="text" class="form-control" name="first-name" id="first-name" [(ngModel)]="inputValue" #firstName placeholder="Enter First Name" (blur)="keyupEvent()">
     </div>
     <!-- div.form-group>button.btn.btn-primary.form-control -->
     <div class="form-group">

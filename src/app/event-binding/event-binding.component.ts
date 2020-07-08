@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-binding.component.scss']
 })
 export class EventBindingComponent implements OnInit {
-  inputValue = '';
+  inputValue = 'some initial value';
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class EventBindingComponent implements OnInit {
   buttonClick(ele: HTMLInputElement) {
     // console.log(event, e);
     console.log('Button Clicked');
-    this.keyupEvent(ele);
+    // this.keyupEvent(ele);
   }
   // keyupEvent(e: KeyboardEvent) {
   //   console.log(e);
@@ -26,10 +26,13 @@ export class EventBindingComponent implements OnInit {
   //   this.inputValue = (e.target as HTMLInputElement).value;
 
   // }
-  keyupEvent(ele: HTMLInputElement) {
-    console.log(ele);
-    ele.value = ele.value.toLocaleUpperCase();
-    this.inputValue = ele.value;
+  // keyupEvent(ele: HTMLInputElement) {
+  //   console.log(ele);
+  //   ele.value = ele.value.toLocaleUpperCase();
+  //   this.inputValue = ele.value;
+  // }
+  keyupEvent() {
+    this.inputValue = this.inputValue.toLocaleUpperCase();
   }
 
 }
