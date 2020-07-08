@@ -12,12 +12,24 @@ export class EventBindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  buttonClick(e: MouseEvent) {
-    console.log(event, e);
+  buttonClick(ele: HTMLInputElement) {
+    // console.log(event, e);
     console.log('Button Clicked');
+    this.keyupEvent(ele);
   }
-  keyupEvent(e: KeyboardEvent) {
-    this.inputValue = (e.target as HTMLInputElement).value;
+  // keyupEvent(e: KeyboardEvent) {
+  //   console.log(e);
+  //   // if (e.keyCode === 13) {
+  //   //   this.inputValue = (e.target as HTMLInputElement).value;
+  //   // }
+
+  //   this.inputValue = (e.target as HTMLInputElement).value;
+
+  // }
+  keyupEvent(ele: HTMLInputElement) {
+    console.log(ele);
+    ele.value = ele.value.toLocaleUpperCase();
+    this.inputValue = ele.value;
   }
 
 }
