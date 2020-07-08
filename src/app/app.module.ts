@@ -9,6 +9,7 @@ import { ClassTypeService } from './common/service/class-type.service';
 import { DisplayDataComponent } from './display-data/display-data.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     ClassTypeComponent,
     ClassesTypeComponent,
     DisplayDataComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
