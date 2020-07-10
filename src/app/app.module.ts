@@ -13,6 +13,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CurrencyFormatPipe } from './common/pipes/currency-format.pipe';
 import { TextFormatPipe } from './common/pipes/text-format.pipe';
 import { SummaryPipe } from './common/pipes/summary.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SummaryPipe } from './common/pipes/summary.pipe';
     PipesComponent,
     CurrencyFormatPipe,
     TextFormatPipe,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,

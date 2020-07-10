@@ -1,0 +1,4 @@
+<p>
+    <i class="fa fa-thumbs-up" [class.liked]="isLike" [class.like]="!isLike" (click)="toggelLike()"></i>
+    <span> {{count + ' like'+(count>1?'s':'')}}</span>
+</p>

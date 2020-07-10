@@ -1,0 +1,17 @@
+<h3>
+    Posts
+</h3>
+<hr>
+<div class="row">
+    <div class="col-3 m-2" *ngFor="let item of postList">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.details}}</p>
+
+                <app-favorite [count]="item.likeCount" [isLike]="item.isLiked"></app-favorite>
+
+            </div>
+        </div>
+    </div>
+</div>

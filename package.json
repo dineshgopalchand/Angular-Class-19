@@ -24,6 +24,7 @@
     "@types/webpack": "^4.41.18",
     "bootstrap": "^4.5.0",
     "classlist.js": "^1.1.20150312",
+    "font-awesome": "^4.7.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "web-animations-js": "^2.3.2",
