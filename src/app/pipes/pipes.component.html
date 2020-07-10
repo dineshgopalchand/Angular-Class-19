@@ -3,34 +3,41 @@
 <!-- <h3>{{titleValue | lowercase }}</h3>
 <h3>{{titleValue | titlecase }}</h3> -->
 <hr>
-<div>
-    <p>{{courseDetails.name | titlecase}}</p>
-    <p>{{courseDetails.name | titlecase}}</p>
-    <p>{{courseDetails.rating | number}}</p>
-    <p>{{courseDetails.rating | number:'0.1-2'}}</p>
-    <p>{{courseDetails.rating1 | number:'0.1-2'}}</p>
-    <p>{{courseDetails.rating2 | number:'0.1-2'}}</p>
-    <p>{{courseDetails.studentCount | number:'0.0-0'}}</p>
-    <p>{{courseDetails.price | currency }}</p>
-    <p>{{courseDetails.price | currency:'INR' }}</p>
-    <p>{{courseDetails.price | currency:'EUR' }}</p>
-    <p>{{courseDetails.price | currency:'DNK' }}</p>
-    <p>{{courseDetails.price | currency:'CHANDAN' }}</p>
-    <p>{{courseDetails.price | currency:'AUD' }}</p>
-    <p>{{courseDetails.dateValue | date:'long' }}</p>
-    <p>{{courseDetails | json}}</p>
+<div class="row">
+    <div class="col-6">
+        <div>
+            <p>{{courseDetails.name | titlecase}}</p>
+            <p>{{courseDetails.name | titlecase}}</p>
+            <p>{{courseDetails.rating | number}}</p>
+            <p>{{courseDetails.rating | number:'0.1-2'}}</p>
+            <p>{{courseDetails.rating1 | number:'0.1-2'}}</p>
+            <p>{{courseDetails.rating2 | number:'0.1-2'}}</p>
+            <p>{{courseDetails.studentCount | number:'0.0-0'}}</p>
+            <p>{{courseDetails.price | currency }}</p>
+            <p>{{courseDetails.price | currency:'INR' }}</p>
+            <p>{{courseDetails.price | currency:'EUR' }}</p>
+            <p>{{courseDetails.price | currency:'DNK' }}</p>
+            <p>{{courseDetails.price | currency:'CHANDAN' }}</p>
+            <p>{{courseDetails.price | currency:'AUD' }}</p>
+            <p>{{courseDetails.dateValue | date:'long' }}</p>
+            <p>{{courseDetails | json}}</p>
+            <p>{{courseDetails.price | currencyFormat:'INR'}}</p>
+            <p [innerHTML]="courseDetails.details | textFormat:textFormatParams"></p>
+            <p>{{courseDetails.details | summary:showMore?showMoreLength:'full'}} <span class="show-more-link" (click)="toggelShowMore()">{{showMore?'Show More': 'Show Less'}}</span></p>
+        </div>
+    </div>
+    <div class="col-6">
+        <table class="table table-bordered">
+            <tr>
+                <td>Key</td>
+                <td>Value</td>
+                <td>JSON Formatted value using <b>`keyvalue`</b> pipe</td>
+            </tr>
+            <tr *ngFor="let item of courseDetails | keyvalue">
+                <td>{{item.key}}</td>
+                <td>{{item.value}}</td>
+                <td>{{item | json}}</td>
+            </tr>
+        </table>
+    </div>
 </div>
-
-
-<table>
-    <tr>
-        <td>Key</td>
-        <td>Value</td>
-        <td>JSON Formatted value using <b>`keyvalue`</b> pipe</td>
-    </tr>
-    <tr *ngFor="let item of courseDetails | keyvalue">
-        <td>{{item.key}}</td>
-        <td>{{item.value}}</td>
-        <td>{{item | json}}</td>
-    </tr>
-</table>
