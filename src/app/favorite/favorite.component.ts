@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
@@ -6,8 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./favorite.component.scss']
 })
 export class FavoriteComponent implements OnInit {
-  @Input() isLike: boolean;
-  @Input() count = 0;
+  // @Input() isLike: boolean;
+  // @Input() count = 0;
+
+  @Input() post: Post = {} as Post;
+  @Output() likeAction = new EventEmitter();
 
   constructor() { }
 
@@ -15,11 +18,21 @@ export class FavoriteComponent implements OnInit {
   }
 
   toggelLike() {
-    this.isLike = !this.isLike;
-    if (this.isLike) {
-      this.count++;
+    this.post.isLiked = !this.post.isLiked;
+    if (this.post.isLiked) {
+      this.post.likeCount++;
     } else {
-      this.count--;
+      this.post.likeCount--;
     }
+    this.likeAction.emit(this.post);
   }
+}
+
+
+export interface Post {
+  id: string;
+  title: string;
+  details: string;
+  likeCount: number;
+  isLiked: boolean;
 }

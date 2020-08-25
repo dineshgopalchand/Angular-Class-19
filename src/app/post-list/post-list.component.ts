@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../favorite/favorite.component';
 
 @Component({
   selector: 'app-post-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListComponent implements OnInit {
 
-  postList: PostList[] = [
+  postList: Post[] = [
     {
       id: 'p001',
       title: 'Post 1',
@@ -43,11 +44,13 @@ export class PostListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  likeFunction(e: Post) {
+    // console.log('like event happened', e);
+    console.log('is liked', e.isLiked);
+    console.log('count', e.likeCount);
+    console.log('ID', e.id);
+
+  }
+
 }
-export interface PostList {
-  id: string;
-  title: string;
-  details: string;
-  likeCount: number;
-  isLiked: boolean;
-}
+

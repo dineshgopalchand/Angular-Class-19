@@ -15,6 +15,8 @@ import { TextFormatPipe } from './common/pipes/text-format.pipe';
 import { SummaryPipe } from './common/pipes/summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { BasicComponent } from './layout/basic/basic.component';
+import { HeaderComponent } from './common/component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PostListComponent } from './post-list/post-list.component';
     TextFormatPipe,
     SummaryPipe,
     FavoriteComponent,
-    PostListComponent
+    PostListComponent,
+    BasicComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

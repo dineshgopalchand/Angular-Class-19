@@ -9,7 +9,8 @@
                 <h5 class="card-title">{{item.title}}</h5>
                 <p class="card-text">{{item.details}}</p>
 
-                <app-favorite [count]="item.likeCount" [isLike]="item.isLiked"></app-favorite>
+                <!-- <app-favorite  [count]="item.likeCount" [isLike]="item.isLiked" (likeAction)="likeFunction($event)"></app-favorite> -->
+                <app-favorite [post]="item" (likeAction)="likeFunction($event)"></app-favorite>
 
             </div>
         </div>
