@@ -17,6 +17,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { BasicComponent } from './layout/basic/basic.component';
 import { HeaderComponent } from './common/component/header/header.component';
+import { SidebarComponent } from './common/component/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HeaderComponent } from './common/component/header/header.component';
     FavoriteComponent,
     PostListComponent,
     BasicComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

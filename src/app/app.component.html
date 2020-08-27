@@ -1,14 +1,23 @@
-<div class="container ">
-    <h2 class="text-center">{{title}}</h2>
-    <!-- <app-class-type></app-class-type> -->
-    <!-- <app-classes-type></app-classes-type> -->
-    <!-- <app-display-data></app-display-data> -->
-    <!-- <app-event-binding></app-event-binding> -->
-    <!-- <app-pipes></app-pipes> -->
+<!-- <app-header></app-header> -->
+<app-basic>
 
-    <app-post-list></app-post-list>
-</div>
+    <ng-container class="header">
+        <app-header></app-header>
+    </ng-container>
 
-<router-outlet>
+    <ng-container class="sidebar">
+        <app-sidebar></app-sidebar>
+    </ng-container>
+    <ng-container class="main-content">
+        <!-- <app-class-type></app-class-type> -->
+        <!-- <app-classes-type></app-classes-type> -->
+        <!-- <app-display-data></app-display-data> -->
+        <!-- <app-event-binding></app-event-binding> -->
+        <!-- <app-pipes></app-pipes> -->
 
-</router-outlet>
+        <!-- <app-post-list></app-post-list> -->
+        <app-post-list></app-post-list>
+        <router-outlet></router-outlet>
+    </ng-container>
+
+</app-basic>

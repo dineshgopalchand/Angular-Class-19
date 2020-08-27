@@ -1,1 +1,17 @@
-<p>basic works!</p>
+<div class="container-fluid">
+    <header>
+        <ng-content select=".header"></ng-content>
+    </header>
+    <div class="main-container">
+        <div class="container">
+            <div class="d-flex ">
+                <div class="p-2">
+                    <ng-content select=".sidebar"></ng-content>
+                </div>
+                <div class="p-2 flex-grow-1 ">
+                    <ng-content select=".main-content"></ng-content>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
