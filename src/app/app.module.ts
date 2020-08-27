@@ -18,6 +18,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { BasicComponent } from './layout/basic/basic.component';
 import { HeaderComponent } from './common/component/header/header.component';
 import { SidebarComponent } from './common/component/sidebar/sidebar.component';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SidebarComponent } from './common/component/sidebar/sidebar.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DirectivesModule
   ],
   providers: [
     ClassTypeService

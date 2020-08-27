@@ -1,0 +1,41 @@
+<div class="m-2">
+    <button class="btn btn-primary" *ngIf="!isSaved">Save</button>
+    <button class="btn btn-danger" *ngIf="isSaved">Delete</button>
+</div>
+
+
+
+
+
+<button class="btn btn-info m-2" (click)="toggleSave()">Toggle</button>
+
+<div class="m-2" *ngIf="name==='din'">
+    THis is dinesh details
+</div>
+<div class="m-2" *ngIf="name==='sit'">
+    THis is Sitanshu details
+</div>
+<div class="m-2" *ngIf="name==='sar'">
+    THis is Sarve details
+</div>
+
+
+<div class="m-2 p-2">
+
+    <div *ngIf="number%2==0;then evenBlock;else oddBlock"></div>
+    <ng-template #evenBlock>{{number}} is even numnber</ng-template>
+    <ng-template #oddBlock>{{number}} is odd number</ng-template>
+</div>
+
+<br>
+
+<button class="btn btn-primary" (click)="addCourse()">AddCourse</button>
+<div class="book-list">
+    <ul class="list-group">
+        <li class="list-group-item " *ngFor="let course of courseList; index as i; first as f; last as l; odd as o;even as e;trackBy:trackByID" [class.active]="f" [class.list-group-item-danger]="l">
+            <!-- <li class="list-group-item " *ngFor="let course of courseList;trackBy:trackByID" [class.active]="f" [class.list-group-item-danger]="l"> -->
+            {{i + 1}}. {{course.name}} ({{'first :'+ f}}) ({{'last :'+ l}}) ({{'Odd :'+ o}}) ({{'Even :'+ e}})
+            <!-- {{i + 1}}. {{course.name}} -->
+        </li>
+    </ul>
+</div>
