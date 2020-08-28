@@ -4,7 +4,7 @@
 </div>
 
 
-
+<h3>ngIf</h3>
 
 
 <button class="btn btn-info m-2" (click)="toggleSave()">Toggle</button>
@@ -26,9 +26,18 @@
     <ng-template #evenBlock>{{number}} is even numnber</ng-template>
     <ng-template #oddBlock>{{number}} is odd number</ng-template>
 </div>
+<hr>
 
-<br>
+<div class="m-2 p-2">
+    <h3>By using hidden property</h3>
+    <!-- <div *ngIf="number%2==0;then evenBlock;else oddBlock"></div> -->
+    <div [hidden]="!(number%2==0)">{{number}} is even numnber</div>
+    <div [hidden]="number%2==0">{{number}} is odd number</div>
+</div>
 
+<hr>
+
+<h3>NgForof </h3>
 <button class="btn btn-primary" (click)="addCourse()">AddCourse</button>
 <div class="book-list">
     <ul class="list-group">

@@ -1,0 +1,46 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link " (click)="activeTab='post'" [class.active]="activeTab=='post'">Post</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="activeTab='map'" [class.active]="activeTab=='map'">Map</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="activeTab='about'" [class.active]="activeTab=='about'">About</a>
+    </li>
+</ul>
+<!-- <div class="tabs" *ngIf="activeTab=='post'">
+    <! -- <app-directive-introduction></app-directive-introduction> -- >
+    <ng-content select=".post-tab"></ng-content>
+</div> -->
+<!-- <div class="tabs" *ngIf="activeTab=='map'">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1884562518662!2d77.70143501397109!3d12.959789618645875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13cd124e4dab%3A0xa6a6d1a400ac9903!2sSDLC%20Training!5e0!3m2!1sen!2sin!4v1598624541070!5m2!1sen!2sin"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div> -->
+<!-- <div class="tabs" *ngIf="activeTab=='about'">
+    <h2>About</h2>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem adipisci provident dolorem sunt quibusdam nulla expedita sed vitae eaque? Obcaecati, ullam voluptatem in similique voluptate eum voluptatibus cumque cum!</p>
+        <p>In debitis sequi officia officiis aut consequuntur veritatis rem labore porro qui. Qui, ullam vero maxime quasi ratione ut perferendis ducimus maiores quo, ipsum nam illo ab excepturi? Obcaecati, culpa!</p>
+    </div>
+</div> -->
+
+<div [ngSwitch]="activeTab">
+    <div *ngSwitchCase="'post'">
+        <ng-content select=".post-tab"></ng-content>
+    </div>
+    <div *ngSwitchCase="'map'">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1884562518662!2d77.70143501397109!3d12.959789618645875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13cd124e4dab%3A0xa6a6d1a400ac9903!2sSDLC%20Training!5e0!3m2!1sen!2sin!4v1598624541070!5m2!1sen!2sin"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div *ngSwitchCase="'about'">
+        <h2>About</h2>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem adipisci provident dolorem sunt quibusdam nulla expedita sed vitae eaque? Obcaecati, ullam voluptatem in similique voluptate eum voluptatibus cumque cum!</p>
+            <p>In debitis sequi officia officiis aut consequuntur veritatis rem labore porro qui. Qui, ullam vero maxime quasi ratione ut perferendis ducimus maiores quo, ipsum nam illo ab excepturi? Obcaecati, culpa!</p>
+        </div>
+    </div>
+    <div *ngSwitchDefault>
+        Not a valid selection
+    </div>
+</div>
