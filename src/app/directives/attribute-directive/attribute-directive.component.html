@@ -1,0 +1,37 @@
+<ul class="list-group">
+    <ng-container *ngIf="showCourse">
+        <!-- <ng-container *ngFor="let course of courseList; index as i; first as f; last as l; odd as o;even as e;">
+            <li class="list-group-item " [ngClass]="{
+            'active some other': f,
+            'list-group-item-danger':l
+        }" *ngIf="!e">
+                {{i + 1}}. {{course.name}} ({{'first :'+ f}}) ({{'last :'+ l}}) ({{'Odd :'+ o}}) ({{'Even :'+ e}})
+            </li>
+        </ng-container> -->
+        <ng-container *ngFor="let course of courseList; index as i; first as f; last as l; odd as o;even as e;">
+            <li class="list-group-item " [ngClass]="{
+            'active some other': f,
+            'list-group-item-danger':l
+        }" [ngStyle]="{
+            'font-weight': e?'bold':'300',
+            fontSize: o?'1.5em':'0.8em'
+        }">
+                {{i + 1}}. {{course.name}} ({{'first :'+ f}}) ({{'last :'+ l}}) ({{'Odd :'+ o}}) ({{'Even :'+ e}})
+            </li>
+        </ng-container>
+    </ng-container>
+
+</ul>
+
+<table class="table table-bordered mt-3">
+    <tr class="table-active">
+        <td>ID</td>
+        <td>Name</td>
+        <td>Duration</td>
+    </tr>
+    <tr *ngFor="let course of courseList">
+        <td>{{course.id}}</td>
+        <td>{{course.name}}</td>
+        <td>{{course.specification?.duration || '-'}}</td>
+    </tr>
+</table>
